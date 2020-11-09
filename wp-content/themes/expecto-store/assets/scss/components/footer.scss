@@ -6,13 +6,13 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 3rem;
     text-align: left;
   }
 }
 
 .footer__widget {
-  width: calc((100% - 3rem) / 3);
+  @include grid4;
+  // width: calc((100% - $gutter) / 3);
   color: $dark;
 
   .footer__title {

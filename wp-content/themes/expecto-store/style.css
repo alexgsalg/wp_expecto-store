@@ -36,9 +36,109 @@ h5 {
   font-family: "Ruda", sans-serif;
 }
 
+.hero,
+.cta {
+  width: 100%;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero__title,
+.cta__title {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  color: inherit;
+  margin-bottom: 2rem;
+}
+.hero__text,
+.cta__text {
+  font-size: 2.8rem;
+  line-height: 130%;
+  text-align: center;
+}
+
+section {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+section.first {
+  padding-top: 5rem;
+}
+
+.hero {
+  color: #ffffff;
+}
+
+.cta {
+  background-image: linear-gradient(to right, #ffffffc7, #ffffffc7), url("assets/img/hero-bg.jpg");
+  color: #444444;
+}
+
 .wrapper {
   max-width: 1400px;
   padding: 0 1.5rem;
+}
+
+.features .wrapper,
+.specs .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feature {
+  width: calc((100% - 4rem) / 2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 230px;
+  padding: 3rem;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.feature__title {
+  width: 80%;
+  font-family: "Varela", sans-serif;
+  font-size: 2.5rem;
+  line-height: 3.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.specbox {
+  width: calc((100% - (4rem * 2)) / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.specbox img {
+  height: 5rem;
+  margin-right: 1.5rem;
+}
+.specbox__desc p {
+  max-width: 18rem;
+  font-family: "Varela", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #666666;
+}
+.specbox__desc .specbox__title {
+  max-width: 20rem;
+  margin-bottom: 0.3rem;
+  font-family: "Ruda", sans-serif !important;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #666666;
 }
 
 /*Header */
@@ -87,12 +187,11 @@ footer .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 3rem;
   text-align: left;
 }
 
 .footer__widget {
-  width: calc((100% - 3rem) / 3);
+  width: calc((100% - (4rem * 3)) / 4);
   color: #444444;
 }
 .footer__widget .footer__title {

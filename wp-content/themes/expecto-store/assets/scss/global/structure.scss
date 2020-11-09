@@ -1,4 +1,109 @@
+.hero,
+.cta {
+  width: 100%;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__title {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    color: inherit;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    font-size: 2.8rem;
+    line-height: 130%;
+    text-align: center;
+  }
+}
+
+section {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  &.first {
+    padding-top: 5rem;
+  }
+}
+
+.hero {
+  // @include bg(hero-bg, #19439fc9, rgba(50, 104, 220, 0.747));
+  color: $light;
+}
+.cta {
+  @include bg(hero-bg, #ffffffc7, #ffffffc7);
+  color: $dark;
+}
 .wrapper {
   max-width: 1400px;
   padding: 0 1.5rem;
+}
+.features,
+.specs {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.feature {
+  @include grid2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 230px;
+  padding: 3rem;
+
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__title {
+    width: 80%;
+    font-family: $varela;
+    font-size: 2.5rem;
+    line-height: 3.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: $light;
+  }
+}
+
+.specbox {
+  @include grid3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 5rem;
+    margin-right: 1.5rem;
+  }
+  &__desc {
+    p {
+      max-width: 18rem;
+      font-family: $varela;
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      color: $gray;
+    }
+    .specbox__title {
+      max-width: 20rem;
+      margin-bottom: 0.3rem;
+      font-family: $ruda !important;
+      font-size: 1.5rem;
+      line-height: 1.9rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $gray;
+    }
+  }
 }

@@ -1,0 +1,16 @@
+@mixin bg($name, $color1, $color2) {
+  $url: "assets/img/#{$name}.jpg";
+  background-image: linear-gradient(to right, $color1, $color2), url($url);
+}
+
+@mixin grid2 {
+  width: calc((100% - #{$gutter}) / 2);
+}
+
+@mixin grid3 {
+  width: calc((100% - (#{$gutter} * 2)) / 3);
+}
+
+@mixin grid4 {
+  width: calc((100% - (#{$gutter} * 3)) / 4);
+}
