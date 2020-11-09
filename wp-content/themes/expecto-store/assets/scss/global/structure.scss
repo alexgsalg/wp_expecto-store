@@ -25,8 +25,8 @@
 }
 
 section {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   &.first {
     padding-top: 5rem;
   }
@@ -103,6 +103,49 @@ section {
       line-height: 1.9rem;
       font-weight: bold;
       text-transform: uppercase;
+      color: $gray;
+    }
+  }
+}
+.shop {
+  border-top: 1px solid #ededed;
+  h2 {
+    font-family: $ruda;
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: $gutter;
+  }
+}
+
+.product-grid {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: $gutter;
+
+  .product {
+    @include grid4;
+    text-align: center;
+    font-weight: bold;
+    line-height: 2.2rem;
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    &__title {
+      font-size: 1.7rem;
+      font-family: $ruda;
+      text-transform: uppercase;
+    }
+    &__price {
+      margin-top: 0.5rem;
+      font-size: 1.8rem;
+      font-family: "Arial";
       color: $gray;
     }
   }

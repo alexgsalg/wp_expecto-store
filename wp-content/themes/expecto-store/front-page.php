@@ -21,7 +21,7 @@ get_header();
   $featureL = get_field('featured_left');
   $featureR = get_field('featured_right');
   ?>
-  
+
   <div class="feature" style="background-image: linear-gradient(to right, #333333c7, #333333c7),
       url('<?php echo $featureL['bg_left'] ?>')">
     <h3 class="feature__title"><?php echo $featureL['text_left'] ?></h3>
@@ -85,8 +85,8 @@ get_header();
         $posts = get_posts($args);
         foreach ($posts as $post) :
         ?>
-        <a href="<?php the_permalink() ?>" class="product__item">
-            <?php the_post_thumbnail('thumbnail'); ?>
+        <a href="<?php the_permalink() ?>" class="product">
+            <?php the_post_thumbnail('medium'); ?>
             <p class="product__title"><?php the_title(); ?></p>
             <p class="product__price">R$ 00,00</p>
           </a>

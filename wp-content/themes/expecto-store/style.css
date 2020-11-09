@@ -63,8 +63,8 @@ h5 {
 }
 
 section {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 section.first {
   padding-top: 5rem;
@@ -138,6 +138,48 @@ section.first {
   line-height: 1.9rem;
   font-weight: bold;
   text-transform: uppercase;
+  color: #666666;
+}
+
+.shop {
+  border-top: 1px solid #ededed;
+}
+.shop h2 {
+  font-family: "Ruda", sans-serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 4.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4rem;
+}
+.product-grid .product {
+  width: calc((100% - (4rem * 3)) / 4);
+  text-align: center;
+  font-weight: bold;
+  line-height: 2.2rem;
+}
+.product-grid .product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.product-grid .product__title {
+  font-size: 1.7rem;
+  font-family: "Ruda", sans-serif;
+  text-transform: uppercase;
+}
+.product-grid .product__price {
+  margin-top: 0.5rem;
+  font-size: 1.8rem;
+  font-family: "Arial";
   color: #666666;
 }
 
