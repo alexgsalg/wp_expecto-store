@@ -69,7 +69,7 @@ get_header();
 
 </div>
 </section>
-    
+
 <section class="shop">
   <div class="wrapper">
 
@@ -85,26 +85,35 @@ get_header();
         $posts = get_posts($args);
         foreach ($posts as $post) :
         ?>
-        <a href="<?php the_permalink() ?>" class="product">
-            <?php the_post_thumbnail('medium'); ?>
+          <a href="<?php the_permalink() ?>" class="product">
+            <div class="product__imgbox">
+              <?php the_post_thumbnail('medium'); ?>
+            </div>
             <p class="product__title"><?php the_title(); ?></p>
             <p class="product__price">R$ 00,00</p>
           </a>
-        <?php endforeach; ?>
+
+          <?php wp_reset_postdata(); // Restore original Post Data 
+         endforeach; ?>
     </div>
-    <a href="" class="button">Já escolheu</a>
+    <div class="wrapper--center mtop-4">
+      <a href="<?php echo site_url('/produtos') ?>" class="button">Já escolheu</a>
+    </div>
 
   </div>
 </section>
 
 <section class="cta">
-  <h2 class="cta__title">Eventos que participamos!</h2>
-  <p class="cta__text">Estamos presentes em grandes eventos do mundo geek</p>
-  <a href="#" class="button--red">Venha nos visitar</a>
+<?php 
+  $ctaContent = get_field('cta_content');
+  $btnUrl = $ctaContent['cta_link'];
+  ?>
+  <h2 class="cta__title"><?php echo $ctaContent['cta_title']; ?></h2>
+  <p class="cta__text"><?php echo $ctaContent['cta_subtitle']; ?></p>
+  <a href="<?php echo site_url($btnUrl) ?>" class="button--red mtop-4">Venha nos visitar</a>
 </section>
 
 </main>
-
 
 <?php 
 get_footer(); 

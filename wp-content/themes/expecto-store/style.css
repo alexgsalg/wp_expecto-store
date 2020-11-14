@@ -8,6 +8,10 @@
 	Tags: shop, hp, hq, dromini
 */
 /* ################################################################################ */
+.mtop-4 {
+  margin-top: 4rem !important;
+}
+
 :root {
   font-size: 62.5%;
   line-height: 1.6em;
@@ -34,6 +38,7 @@ h3,
 h4,
 h5 {
   font-family: "Ruda", sans-serif;
+  line-height: 1.6em;
 }
 
 .hero,
@@ -53,7 +58,7 @@ h5 {
   font-size: 4.5rem;
   text-transform: uppercase;
   color: inherit;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .hero__text,
 .cta__text {
@@ -79,13 +84,18 @@ section.first {
   color: #444444;
 }
 
-.wrapper {
+.wrapper, .wrapper--center {
   max-width: 1400px;
+  margin: 0 auto;
   padding: 0 1.5rem;
 }
+.wrapper--center {
+  text-align: center;
+}
 
-.features .wrapper,
-.specs .wrapper {
+.features .wrapper, .features .wrapper--center,
+.specs .wrapper,
+.specs .wrapper--center {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -166,11 +176,6 @@ section.first {
   font-weight: bold;
   line-height: 2.2rem;
 }
-.product-grid .product img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
 .product-grid .product__title {
   font-size: 1.7rem;
   font-family: "Ruda", sans-serif;
@@ -182,12 +187,70 @@ section.first {
   font-family: "Arial";
   color: #666666;
 }
+.product-grid .product__imgbox {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+}
+.product-grid .product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: all ease-in-out 250ms;
+}
+.product-grid .product:hover {
+  color: #19449f;
+}
+.product-grid .product:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.contact .wrapper, .contact .wrapper--center {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.contact h2 {
+  margin-bottom: 1rem;
+  font-size: 4.5rem;
+  line-height: 1em;
+  color: #444444;
+  text-transform: uppercase;
+}
+
+.button, .button--red {
+  max-width: 30rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.8rem 2rem;
+  background-color: #19449f;
+  border-bottom: 5px solid #444444;
+  color: #ffffff;
+  font-family: "Ruda", sans-serif;
+  font-size: 2rem;
+  line-height: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+.button--red {
+  background-color: #bd1b1b;
+}
+.button:hover, .button--red:hover {
+  background-color: #666666;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 /*Header */
 header {
   background-color: #444444;
 }
-header .wrapper {
+header .wrapper, header .wrapper--center {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -225,7 +288,7 @@ footer {
   border-top: 10px solid #444444;
   padding: 3rem 0;
 }
-footer .wrapper {
+footer .wrapper, footer .wrapper--center {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;

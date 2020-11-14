@@ -1,0 +1,28 @@
+.button {
+  max-width: 30rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.8rem 2rem;
+  background-color: $primary;
+  border-bottom: 5px solid $dark;
+  color: $light;
+  font-family: $ruda;
+  font-size: 2rem;
+  line-height: 1em;
+  text-align: center;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+
+  &--red {
+    @extend .button;
+    background-color: $secondary;
+  }
+
+  &:hover {
+    background-color: $gray;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
