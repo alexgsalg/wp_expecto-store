@@ -15,3 +15,9 @@ $varela: "Varela", sans-serif;
 .mtop-4 {
   margin-top: 4rem !important;
 }
+
+$breakpoints: (
+  phone: 480px,
+  tablet: 770px,
+  desktop: 1024px,
+);

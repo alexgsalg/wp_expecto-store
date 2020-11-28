@@ -1,0 +1,68 @@
+.specbox {
+  @include grid3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media("<=tablet") {
+    flex-direction: column;
+  }
+
+  @include media("<=phone") {
+    flex-direction: row;
+    // justify-content: space-between;
+    margin-bottom: 4rem;
+  }
+
+  img {
+    height: 5rem;
+    margin-right: 1.5rem;
+
+    @include media("<=tablet", ">=phone") {
+      margin-right: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    @include media("<=phone") {
+      flex: 0.25;
+    }
+  }
+  &__desc {
+    @include media("<=phone") {
+      flex: 0.75;
+      text-align: left;
+    }
+
+    p {
+      max-width: 18rem;
+      font-family: $varela;
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      color: $gray;
+
+      @include media("<=phone") {
+        text-align: left;
+        max-width: unset;
+      }
+    }
+    .specbox__title {
+      max-width: 20rem;
+      margin-bottom: 0.3rem;
+      font-family: $ruda !important;
+      font-size: 1.5rem;
+      line-height: 1.9rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $gray;
+
+      @include media("<=phone") {
+        text-align: left;
+        max-width: unset;
+      }
+    }
+
+    @include media("<=tablet") {
+      text-align: center;
+    }
+  }
+}

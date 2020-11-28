@@ -5,12 +5,24 @@
 
 @mixin grid2 {
   width: calc((100% - #{$gutter}) / 2);
+
+  @include media("<=phone") {
+    width: 100%;
+  }
 }
 
 @mixin grid3 {
   width: calc((100% - (#{$gutter} * 2)) / 3);
+
+  @include media("<=phone") {
+    width: 100%;
+  }
 }
 
 @mixin grid4 {
   width: calc((100% - (#{$gutter} * 3)) / 4);
+
+  @include media("<=phone") {
+    width: 100%;
+  }
 }

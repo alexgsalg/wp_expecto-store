@@ -10,17 +10,30 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @include media("<=phone") {
+    padding: 2rem;
+  }
+
   &__title {
     font-size: 4.5rem;
     text-transform: uppercase;
     color: inherit;
     margin-bottom: 1rem;
+
+    @include media("<=phone") {
+      font-size: 3.5rem;
+      line-height: 1.2;
+    }
   }
 
   &__text {
     font-size: 2.8rem;
     line-height: 130%;
     text-align: center;
+
+    @include media("<=phone") {
+      font-size: 2rem;
+    }
   }
 }
 
@@ -29,6 +42,11 @@ section {
   padding-bottom: 4rem;
   &.first {
     padding-top: 5rem;
+  }
+
+  @include media("<=phone") {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -56,63 +74,13 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-}
 
-.feature {
-  @include grid2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 230px;
-  padding: 3rem;
-
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  &__title {
-    width: 80%;
-    font-family: $varela;
-    font-size: 2.5rem;
-    line-height: 3.2rem;
-    text-align: center;
-    text-transform: uppercase;
-    color: $light;
-  }
-}
-
-.specbox {
-  @include grid3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  img {
-    height: 5rem;
-    margin-right: 1.5rem;
-  }
-  &__desc {
-    p {
-      max-width: 18rem;
-      font-family: $varela;
-      font-size: 1.2rem;
-      line-height: 1.6rem;
-      color: $gray;
-    }
-    .specbox__title {
-      max-width: 20rem;
-      margin-bottom: 0.3rem;
-      font-family: $ruda !important;
-      font-size: 1.5rem;
-      line-height: 1.9rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: $gray;
+    @include media("<=phone") {
+      flex-wrap: wrap;
     }
   }
 }
+
 .shop {
   border-top: 1px solid #ededed;
   h2 {
@@ -123,53 +91,6 @@ section {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: $gutter;
-  }
-}
-
-.product-grid {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: $gutter;
-
-  .product {
-    @include grid4;
-    text-align: center;
-    font-weight: bold;
-    line-height: 2.2rem;
-
-    &__title {
-      font-size: 1.7rem;
-      font-family: $ruda;
-      text-transform: uppercase;
-    }
-    &__price {
-      margin-top: 0.5rem;
-      font-size: 1.8rem;
-      font-family: "Arial";
-      color: $gray;
-    }
-    &__imgbox {
-      width: 100%;
-      height: 200px;
-      overflow: hidden;
-      margin-bottom: 0.8rem;
-    }
-
-    img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      transition: all ease-in-out 250ms;
-    }
-    &:hover {
-      color: $primary;
-
-      img {
-        transform: scale(1.1);
-        opacity: 0.8;
-      }
-    }
   }
 }
 

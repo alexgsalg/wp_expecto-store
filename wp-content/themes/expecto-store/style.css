@@ -53,6 +53,12 @@ h5 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media (max-width: 480px) {
+  .hero,
+.cta {
+    padding: 2rem;
+  }
+}
 .hero__title,
 .cta__title {
   font-size: 4.5rem;
@@ -60,11 +66,24 @@ h5 {
   color: inherit;
   margin-bottom: 1rem;
 }
+@media (max-width: 480px) {
+  .hero__title,
+.cta__title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
+}
 .hero__text,
 .cta__text {
   font-size: 2.8rem;
   line-height: 130%;
   text-align: center;
+}
+@media (max-width: 480px) {
+  .hero__text,
+.cta__text {
+    font-size: 2rem;
+  }
 }
 
 section {
@@ -73,6 +92,12 @@ section {
 }
 section.first {
   padding-top: 5rem;
+}
+@media (max-width: 480px) {
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 .hero {
@@ -100,55 +125,12 @@ section.first {
   justify-content: space-between;
   align-items: center;
 }
-
-.feature {
-  width: calc((100% - 4rem) / 2);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 230px;
-  padding: 3rem;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.feature__title {
-  width: 80%;
-  font-family: "Varela", sans-serif;
-  font-size: 2.5rem;
-  line-height: 3.2rem;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.specbox {
-  width: calc((100% - (4rem * 2)) / 3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.specbox img {
-  height: 5rem;
-  margin-right: 1.5rem;
-}
-.specbox__desc p {
-  max-width: 18rem;
-  font-family: "Varela", sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.6rem;
-  color: #666666;
-}
-.specbox__desc .specbox__title {
-  max-width: 20rem;
-  margin-bottom: 0.3rem;
-  font-family: "Ruda", sans-serif !important;
-  font-size: 1.5rem;
-  line-height: 1.9rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #666666;
+@media (max-width: 480px) {
+  .features .wrapper, .features .wrapper--center,
+.specs .wrapper,
+.specs .wrapper--center {
+    flex-wrap: wrap;
+  }
 }
 
 .shop {
@@ -162,49 +144,6 @@ section.first {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 4rem;
-}
-
-.product-grid {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 4rem;
-}
-.product-grid .product {
-  width: calc((100% - (4rem * 3)) / 4);
-  text-align: center;
-  font-weight: bold;
-  line-height: 2.2rem;
-}
-.product-grid .product__title {
-  font-size: 1.7rem;
-  font-family: "Ruda", sans-serif;
-  text-transform: uppercase;
-}
-.product-grid .product__price {
-  margin-top: 0.5rem;
-  font-size: 1.8rem;
-  font-family: "Arial";
-  color: #666666;
-}
-.product-grid .product__imgbox {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  margin-bottom: 0.8rem;
-}
-.product-grid .product img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: all ease-in-out 250ms;
-}
-.product-grid .product:hover {
-  color: #19449f;
-}
-.product-grid .product:hover img {
-  transform: scale(1.1);
-  opacity: 0.8;
 }
 
 .contact .wrapper, .contact .wrapper--center {
@@ -284,6 +223,172 @@ header .wrapper, header .wrapper--center {
   background-color: #19449f;
 }
 
+.feature {
+  width: calc((100% - 4rem) / 2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 230px;
+  padding: 3rem;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 480px) {
+  .feature {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .feature {
+    min-height: 150px;
+    margin-bottom: 2rem;
+    padding: 1.8rem;
+  }
+}
+.feature__title {
+  width: 80%;
+  font-family: "Varela", sans-serif;
+  font-size: 2.5rem;
+  line-height: 3.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+@media (max-width: 480px) {
+  .feature__title {
+    font-size: 2rem;
+    width: 100%;
+  }
+}
+
+.product-grid {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4rem;
+}
+.product-grid .product {
+  width: calc((100% - (4rem * 3)) / 4);
+  text-align: center;
+  font-weight: bold;
+  line-height: 2.2rem;
+}
+@media (max-width: 480px) {
+  .product-grid .product {
+    width: 100%;
+  }
+}
+.product-grid .product__title {
+  font-size: 1.7rem;
+  font-family: "Ruda", sans-serif;
+  text-transform: uppercase;
+}
+.product-grid .product__price {
+  margin-top: 0.5rem;
+  font-size: 1.8rem;
+  font-family: "Arial";
+  color: #666666;
+}
+.product-grid .product__imgbox {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+}
+.product-grid .product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: all ease-in-out 250ms;
+}
+.product-grid .product:hover {
+  color: #19449f;
+}
+.product-grid .product:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.specbox {
+  width: calc((100% - (4rem * 2)) / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 480px) {
+  .specbox {
+    width: 100%;
+  }
+}
+@media (max-width: 770px) {
+  .specbox {
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  .specbox {
+    flex-direction: row;
+    margin-bottom: 4rem;
+  }
+}
+.specbox img {
+  height: 5rem;
+  margin-right: 1.5rem;
+}
+@media (max-width: 770px) and (min-width: 480px) {
+  .specbox img {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .specbox img {
+    flex: 0.25;
+  }
+}
+@media (max-width: 480px) {
+  .specbox__desc {
+    flex: 0.75;
+    text-align: left;
+  }
+}
+.specbox__desc p {
+  max-width: 18rem;
+  font-family: "Varela", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #666666;
+}
+@media (max-width: 480px) {
+  .specbox__desc p {
+    text-align: left;
+    max-width: unset;
+  }
+}
+.specbox__desc .specbox__title {
+  max-width: 20rem;
+  margin-bottom: 0.3rem;
+  font-family: "Ruda", sans-serif !important;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #666666;
+}
+@media (max-width: 480px) {
+  .specbox__desc .specbox__title {
+    text-align: left;
+    max-width: unset;
+  }
+}
+@media (max-width: 770px) {
+  .specbox__desc {
+    text-align: center;
+  }
+}
+
 footer {
   border-top: 10px solid #444444;
   padding: 3rem 0;
@@ -298,6 +403,11 @@ footer .wrapper, footer .wrapper--center {
 .footer__widget {
   width: calc((100% - (4rem * 3)) / 4);
   color: #444444;
+}
+@media (max-width: 480px) {
+  .footer__widget {
+    width: 100%;
+  }
 }
 .footer__widget .footer__title {
   margin-bottom: 1rem;

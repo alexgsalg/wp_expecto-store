@@ -75,26 +75,21 @@ get_header();
 
     <h2>Nossos produtos</h2>
     <div class="product-grid">
-      <?php 
-        $args  = array(
-          'posts_per_page'  => 6,
-          'post_type'       => 'post',
-          'order'           => 'ASC',
-        );
 
-        $posts = get_posts($args);
-        foreach ($posts as $post) :
-        ?>
-          <a href="<?php the_permalink() ?>" class="product">
-            <div class="product__imgbox">
-              <?php the_post_thumbnail('medium'); ?>
-            </div>
-            <p class="product__title"><?php the_title(); ?></p>
-            <p class="product__price">R$ 00,00</p>
-          </a>
-
-          <?php wp_reset_postdata(); // Restore original Post Data 
-         endforeach; ?>
+    <?php 
+      $homeNewProducts = new WP_Query(array(
+        'posts_per_page' => '8',
+        'post_type'       => 'post',
+        'order'           => 'ASC',
+      ));
+      while($homeNewProducts->have_posts()) {
+        $homeNewProducts->the_post();
+        
+        get_template_part('template-parts/content', 'products');
+      }
+      wp_reset_postdata();
+    ?>
+    
     </div>
     <div class="wrapper--center mtop-4">
       <a href="<?php echo site_url('/produtos') ?>" class="button">Já escolheu</a>
